@@ -15,11 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from proyectocoder.views import vista_plantilla
-from proyectocoder.views import anio_nacimiento
-from proyectocoder.views import dia_hoy
-from proyectocoder.views import iniciar_sesion
-from proyectocoder.views import vista_saludo
+from proyectocoder.views import *
+from appfamilia.views import lista_familia
 
 
 urlpatterns = [
@@ -28,5 +25,19 @@ urlpatterns = [
     path('login/',iniciar_sesion),
     path('hoy/<nombre>/',dia_hoy),
     path("calcular-nacimiento/<edad>/",anio_nacimiento),
-    path("plantilla/", vista_plantilla)]
+    path("plantilla/", vista_plantilla),
+    path("alumnos/",vista_listado_alumnos2),
+    path("familia/",lista_familia),
+    path("appfamilia/",lista_familia)
+    ]
+
+
+
+
+
+
+
+
+
+
 

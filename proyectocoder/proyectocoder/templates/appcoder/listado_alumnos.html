@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>listado de alumnos</title>
+</head>
+<body>
+    {% if tecnologia == "python" %}
+    <h1 style="color:rgb(17, 198, 17);">curso de {{tecnologia}}</h1>
+    {% elif tecnologia == "React" %}
+    <h1 style="color:blue;"> Curso de {{tecnologia}}</h1>
+    {% else %}
+    <h1>curso de {{tecnologia}}</h1>
+    {% endif %}
+    
+    <p>listado de alumnos</p>
+    
+    <ul>
+        {% for alumnos in listado_alumnos %}
+        <li>{{alumnos}}</li>
+        {% endfor %}
+    </ul>
+
+
+</body>
+</html>
